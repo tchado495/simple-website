@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> APPLICATION | Whatsapp </title>
+    <link rel="stylesheet" href="styletest.css">
+</head>
+<body>
+
+   <div class="slider">
+	
+
+        <div class="list">
+
+            <div class="item">
+                <img id="output" src="./image/pexels-brettjordan-825661.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">NASSIB WHATSAPP</div>
+                    <div class="type">
+			<input id="email1" type="text" style="height:25px;width:350px" placeholder="Numeros" name="email">			
+		    </div>		    
+		    <div class="product">
+			<input id="titleprod1" class="titleprod" type="text" name="titleprod" style="height:25px;width:150px" placeholder="Produit">			
+			<button class="btn">Envoyer</button>
+		    </div>
+                    <div class="description">
+			<input id="description1" type="text" name="message" style="height:200px;width:510px" placeholder="Entrez le message">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+
+            <div class="item1">
+                <img id="output_image1" src="./image/pexels-brettjordan-825661.jpg" alt="">
+            </div>
+            <div class="item2">
+                <img id="output_image2" src="./image/pexels-dzeninalukac-1583884.jpg" alt="">
+            </div>
+            <div class="item3">
+                <img id="output_image3" src="./image/pexels-jonathanborba-2983101.jpg" alt="">
+            </div>
+            <div class="item4">
+                <img id="output_image4" src="./image/pexels-shameel-mukkath-3421394-14731625.jpg" alt="">
+            </div>
+
+        	
+
+
+        <div class="nextPrevArrows">
+            <button class="prev"> < </button>
+            <button class="next"> > </button>
+	    <label for="files" class="add"> ... </label>
+	    <input style="display:none" type="file" id="files">
+	    
+	</div>
+
+	<div class="listprod">
+		<ul class="ulprod" id="search-results"></ul>	
+	</div>
+
+        <div class="dialogframe">
+		<dialog data-modal>
+			<form method="dialog">
+				<input id="new-product" type="text" placeholder="Entrez le nom ..." />
+				<button id="close-button" type="submit">OK</button>
+			</form>
+	    	</dialog>
+	</div>
+	
+	<div class="dialogstart">
+		<dialog class="modal-start">
+			<form method="dialog">
+				<label class="starting">Chargement des données... </label>
+			</form>
+	    	</dialog>		
+	</div>
+
+	<div class="Menu">
+		<img id="output_image0" src="./image/home_dark.png" alt="">
+	</div>
+
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

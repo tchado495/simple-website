@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPLICATION</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+            <div class="item1">
+		 <img id="get1" src="./image/icons8-windows-client-96.png" alt="">               
+		 <label id="get1" title="Select-one"> Table </label>
+            </div>
+            <div class="item2">
+                <img id="get2" src="./image/graph-with-arrow-icon-3462.png" alt="">
+		<label id="get2" title="Select-two"> Graphiques </label>
+            </div>
+            <div class="item3">
+                <img id="get3" src="./image/icons8-sync-96.png" alt="">
+		<label id="get3" title="Select-free"> Whatsapp </label>
+            </div>
+
+	<script>
+		let body = document.querySelector('body');
+		let page0 = document.getElementById('get1');
+		let page1 = document.getElementById('get2');
+		let page2 = document.getElementById('get3');
+		let item1 = document.querySelector('.item1');
+		let item2 = document.querySelector('.item2');
+		let item3 = document.querySelector('.item3');
+		let active = false; body.style.backgroundColor = "#eee";
+
+		page0.onclick = function(event){
+			window.location.replace("indextable.html");
+		}
+		page1.onclick = function(event){
+			window.location.replace("indexchart.html"); //
+		}
+		page2.onclick = function(event){
+			window.location.replace("indextest.html");
+		}
+
+		if (window.innerWidth <= 525 && active == false) {
+			item1.style.height = "80px"; item1.style.width = "80px"; //chartHisto.style.display = "flex";
+        		item1.style.left = "5%";
+			item2.style.height = "80px"; item2.style.width = "80px"; item2.style.left = "35%";
+			item3.style.height = "80px"; item3.style.width = "80px"; item3.style.left = "5%";
+			item1.style.top = "20%"; item2.style.top = "20%"; item3.style.top = "45%"; 
+			active = true; //alert('resizing 000 !');
+		}
+
+                window.addEventListener('resize', e => {
+  			
+  		if (e.currentTarget.innerWidth <= 525 && active == false) {
+			
+			item1.style.height = "80px"; item1.style.width = "80px"; //chartHisto.style.display = "flex";
+        		item1.style.left = "5%";
+			item2.style.height = "80px"; item2.style.width = "80px"; item2.style.left = "35%";
+			item3.style.height = "80px"; item3.style.width = "80px"; item3.style.left = "5%";
+			item1.style.top = "20%"; item2.style.top = "20%"; item3.style.top = "45%"; 
+			active = true; //alert('resizing 000 !');
+ 
+  		}
+  		if (e.currentTarget.innerWidth >= 600 && active == true) {
+			
+        		item1.style.height = "80px"; item1.style.width = "80px"; //chartHisto.style.display = "flex";
+        		item1.style.left = "25%";
+			item2.style.height = "80px"; item2.style.width = "80px"; item2.style.left = "45%";
+			item3.style.height = "80px"; item3.style.width = "80px"; item3.style.left = "65%";
+			item1.style.top = "40%"; item2.style.top = "40%"; item3.style.top = "40%"; 
+			active = false; //alert('resizing 000 !');
+ 
+  		}
+		//alert('resizing !');
+
+		})
+
+	</script>
+
+</body>
+</html>

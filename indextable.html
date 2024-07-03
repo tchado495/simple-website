@@ -1,0 +1,122 @@
+<!-- 
+Responsive HTML Table With Pure CSS - Web Design/UI Design
+
+Code written by:
+👨🏻‍⚕️ Coding Design (Jeet Saru)
+
+> You can do whatever you want with the code. However if you love my content, you can **SUBSCRIBED** my YouTube Channel.
+
+🌎link: www.youtube.com/codingdesign 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>APPLICATION | Table to Database </title>
+    <link rel="stylesheet" type="text/css" href="styletable.css">
+</head>
+
+<body>
+
+	<div class="Menu">
+		<img id="output_image0" src="./image/home_dark.png" alt="">
+	</div>
+
+	<main class="table" id="customers_table">
+        <section class="table__header">
+            <h1 style="color:#ffffff;">Nassib-Volovolo</h1>
+            <div class="select_pdv">
+                <label for="select-pdv" class="select_pdv-btn" title="Select p.d.v"></label>
+                <input type="checkbox" id="select-pdv">
+                <div class="select_pdv-options">
+		    <div style="overflow: scroll;height: 100%; width: 100%;" class="fix-options">
+			<label>P.D.V &nbsp; &#10140;</label>
+		     <label class="container">Nassib-Ambassadeur
+  			<input type="checkbox" checked="checked">
+  			<span class="checkmark"></span>
+		     </label>
+		     <label class="container">Nassib-Ambulant
+  			<input type="checkbox">
+  			<span class="checkmark"></span>
+		     </label>
+
+		    <label class="container">Nassib-Bacha
+  				<input type="checkbox">
+  				<span class="checkmark"></span>
+		    </label>
+		    <label class="container">Nassib-Caltex
+  			<input type="checkbox">
+  			<span class="checkmark"></span>
+		    </label>
+		    <label class="container">Nassib-Corniche
+  			<input type="checkbox">
+  			<span class="checkmark"></span>
+		    </label>
+		    <label class="container">Nassib-Hamramba
+  			<input type="checkbox">
+  			<span class="checkmark"></span>
+		    </label>
+		    <label class="container">Nassib-Itsandra
+  			<input type="checkbox">
+  			<span class="checkmark"></span>
+		    </label>
+		    <label class="container">Nassib-Kalfane
+  			<input type="checkbox">
+  			<span class="checkmark"></span>
+		    </label>
+		    <label class="container">Nassib-Kamtar
+  			<input type="checkbox">
+  			<span class="checkmark"></span>
+		    </label>
+
+		    </div>                   
+
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="search" placeholder="Rechercher ...">
+                <img id="search_img" src="image/search.png" alt="">
+            </div>
+	    <div class="add-group">
+		
+            </div>
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Exporter &nbsp; &#10140;</label>
+                    <label for="export-file" id="toPDF">PDF <img src="image/pdf.png" alt=""></label>
+                    <label for="export-file" id="toJSON">JSON <img src="image/json.png" alt=""></label>
+                    <label for="export-file" id="toCSV">CSV <img src="image/csv.png" alt=""></label>
+                    <label for="export-file" id="toEXCEL">EXCEL <img src="image/excel.png" alt=""></label>
+                </div>
+            </div>
+        </section>
+        <section class="table__body">
+            <table id="xtable">
+                <thead>
+                    <tr>
+                        <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Produit <span class="icon-arrow">&UpArrow;</span></th>
+			<th> Image <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Q.t Prod <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Q.t Vendu <span class="icon-arrow">&UpArrow;</span></th>                        
+                        <th> Prix <span class="icon-arrow">&UpArrow;</span></th>
+                    </tr>
+                </thead>
+                <tbody id="xbody">
+                            <tr>
+			    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
