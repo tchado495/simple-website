@@ -32,8 +32,11 @@ var wtn = 650; var x = 50; var remwtn = 650;
 for(let i=0; i<1; i++){
 	arraynext[0] = item2; arraynext[1] = item3; arraynext[2] = item4; arraynext[3] = item1;
 	arrayoutput[0] = 'output_image2'; arrayoutput[1] = 'output_image3'; arrayoutput[2] = 'output_image4'; arrayoutput[3] = 'output_image1';
-	array[0] = "./image/pexels-brettjordan-825661.jpg"; array[1] ="./image/pexels-barfisch-pix-115740.jpg"
-	array[2] = "./image/pexels-jonathanborba-2983101.jpg"; array[3] ="./image/pexels-shameel-mukkath-3421394-14731625.jpg";
+	let img0 = document.createELement('img'); img0.src = "./image/pexels-brettjordan-825661.jpg";
+	let img1 = document.createELement('img'); img1.src = "./image/pexels-barfisch-pix-115740.jpg";
+	let img2 = document.createELement('img'); img2.src = "./image/pexels-jonathanborba-2983101.jpg";
+	let img3 = document.createELement('img'); img3.src = "./image/pexels-shameel-mukkath-3421394-14731625.jpg";
+	array[0] = img0; array[1] = img1; array[2] = img2; array[3] = img3;
 	arrayprod[0] = 'local1'; arrayprod[1] = 'local2';arrayprod[2] = 'local3'; arrayprod[3] = 'local4'; countrows = 4;
 }
 
