@@ -13,7 +13,7 @@ document.getElementById('output_image0').onclick = function() {
 	window.location.replace("Principale.html");
 }
 
-if(window.innerWidth <= 525){
+if(window.innerWidth <= 800){
 	chartCircle.innerHTML = ''; chartHisto.innerHTML = '';
 	//chartWrapper.style.display = "grid"; chartWrapper.style.gap = "20px"; chartWrapper.style.marginLeft = "5px";
 	chartHisto.style.height = "220px"; chartHisto.style.width = "200px"; //chartHisto.style.display = "flex";
@@ -21,7 +21,7 @@ if(window.innerWidth <= 525){
 	chartCircle.style.height = "220px"; chartCircle.style.width = "200px"; chartCircle.style.left = "5px";
 	//chartCircle.style.display = "grid";
 	chartCircle.style.top = "50%"; //chartHisto.style.marginTop = "10px"; chartWrapper.style.top = "10px";
-	wh = 22; mr = 2; ht = 90; wcir = 0; tp = 230; quot = 4; active = true; alert('resizing 0 !');
+	wh = 22; mr = 2; ht = 90; wcir = 0; tp = 230; quot = 4; active = true; //alert('resizing 0 !');
 }
 
 const createBarGraph = data => {
@@ -165,7 +165,7 @@ window.addEventListener('resize', e => {
   //if (e.currentTarget.innerWidth >= 600 ) {
 	//active = false;
   //}
-  if (e.currentTarget.innerWidth <= 525 && active == false) {
+  if (e.currentTarget.innerWidth <= 800 && active == false) {
     //addBarGraph.classList.remove('active')
     //addHistograph.className = 'active'
 	chartCircle.innerHTML = ''; chartHisto.innerHTML = '';
@@ -175,12 +175,12 @@ window.addEventListener('resize', e => {
 	chartCircle.style.height = "220px"; chartCircle.style.width = "200px"; chartCircle.style.left = "5px";
 	//chartCircle.style.display = "grid";
 	chartCircle.style.top = "50%"; //chartHisto.style.marginTop = "10px"; chartWrapper.style.top = "10px";
-	wh = 10; mr = 2; ht = 90; wcir = 0; tp = 250; quot = 4; active = true; alert('resizing 000 !');
+	wh = 10; mr = 2; ht = 90; wcir = 0; tp = 250; quot = 4; active = true; //alert('resizing 000 !');
 
     createHistograph(data)
     createCircleGraph(data) 
   }
-  if (e.currentTarget.innerWidth >= 600 && active == true) {
+  if (e.currentTarget.innerWidth > 800 && active == true) {
     //addBarGraph.classList.remove('active')
     //addHistograph.className = 'active'
 	chartCircle.innerHTML = ''; chartHisto.innerHTML = '';
