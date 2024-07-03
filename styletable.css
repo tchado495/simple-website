@@ -428,7 +428,7 @@ thead th.active,tbody td.active {
   padding-left: 35px;
   margin-bottom: 0.5px;
   cursor: pointer;
-  font-size: 8px;
+  font-size: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
