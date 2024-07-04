@@ -118,50 +118,6 @@ if(active == false){
 
 }
 
-/*addBarGraph.addEventListener('click', () => {
-  chartWrapper.innerHTML = ''
-  addHistograph.classList.remove('active')
-  addCircleGraph.classList.remove('active')
-  addBarGraph.className = 'active'
-  createBarGraph(data)
-})
-
-addHistograph.addEventListener('click', () => {
-  chartWrapper.innerHTML = ''
-  if (window.innerWidth < 525) {
-    addHistograph.classList.remove('active')
-    addCircleGraph.classList.remove('active')
-    addBarGraph.className = 'active'
-    createBarGraph(data)
-  } else {
-    addBarGraph.classList.remove('active')
-    addCircleGraph.classList.remove('active')
-    addHistograph.className = 'active'
-    createHistograph(data)
-  }
-})
-
-addCircleGraph.addEventListener('click', () => {
-  chartWrapper.innerHTML = ''
-  addHistograph.classList.remove('active')
-  addBarGraph.classList.remove('active')
-  addCircleGraph.className = 'active'
-  createCircleGraph(data)
-})
-
-window.addEventListener('resize', e => {
-  chartWrapper.innerHTML = ''
-  if (e.currentTarget.innerWidth <= 525) {
-    addHistograph.classList.remove('active')
-    addBarGraph.className = 'active'
-    createBarGraph(data)
-  } else {
-    addBarGraph.classList.remove('active')
-    addHistograph.className = 'active'
-    createHistograph(data)
-  }
-})*/
-
 window.addEventListener('resize', e => {
   //chartWrapper.innerHTML = ''  
 
