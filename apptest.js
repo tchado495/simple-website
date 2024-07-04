@@ -597,19 +597,19 @@ function fetchRow(urlimage,imgname,nextline){
 	//const Response = await fetch(urlimage);
 			//const fileblob = await Response.blob();
 			if(imgname == 'pizza1'){
-				array[3] = urlimage; nextline = nexline - 1;
+				array[3] = urlimage; nextline = nextline - 1;
 				arrayprod[3] = imgname;
 			}else{
 				if(imgname == 'biriyani1'){
-					array[2] = urlimage; nextline = nexline - 1;
+					array[2] = urlimage; nextline = nextline - 1;
 					arrayprod[2] = imgname;
 				}else{
 					if(imgname == 'hamburger1'){
-						array[1] = urlimage; nextline = nexline - 1;
+						array[1] = urlimage; nextline = nextline - 1;
 						arrayprod[1] = imgname;
 					}else{
 						if(imgname == 'frite1'){
-							array[0] = urlimage; nextline = nexline - 1;
+							array[0] = urlimage; nextline = nextline - 1;
 							arrayprod[0] = imgname;
 						}else{
 							array[nextline] = urlimage; //array[nextline] = fileblob; 
