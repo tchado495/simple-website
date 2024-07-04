@@ -618,10 +618,11 @@ function fetchRow(urlimage,imgname){
 					}
 				}
 			}
-			displayprod(); nextline = nextline + 1;
+			displayprod();
 			if(nextline >= countrows-1){
 				 startpage.close(); //alert("getrow end : " + imgname);
 			}
+			nextline = nextline + 1;
 }
 
 async function getRow(){
