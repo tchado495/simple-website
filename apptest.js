@@ -541,7 +541,13 @@ function sendMessage() {
 
 function getmessage() {
 	var url = "https://test-websocket-server-echo.glitch.me/";
-	fetch(url,{ method: 'POST', body: JSON.stringify({ id: '2', name: 'tchado', type : 'countrow' }) })		
+	fetch(url,{ method: 'POST', headers: {
+    			'Content-Type': 'application/json',
+   			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE, OPTIONS',
+			'Access-Control-Max-Age': '86400',
+			'Access-Control-Allow-Headers': 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept'
+ 			 }, body: JSON.stringify({ id: '2', name: 'tchado', type : 'countrow' }) })
             		.then(res => res.json())
             		.then(data => {
 				alert('data : ' +data);
