@@ -12,8 +12,11 @@ var wh = 50; var wcir = 0; var mr = 5; var ht = 60; var tp = 300; var magincir =
 document.getElementById('output_image0').onclick = function() {
 	window.location.replace("Principale.html");
 }
-alert('window : ' +window.innerWidth);
-if(window.innerWidth <= 800){
+//alert('window : ' +window.innerWidth);
+let hasTouchScreen = false;
+const UA = navigator.userAgent;
+hasTouchScreen =  /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) || /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA);
+if(hasTouchScreen){
 	chartCircle.innerHTML = ''; chartHisto.innerHTML = '';
 	//chartWrapper.style.display = "grid"; chartWrapper.style.gap = "20px"; chartWrapper.style.marginLeft = "5px";
 	chartHisto.style.height = "220px"; chartHisto.style.width = "200px"; //chartHisto.style.display = "flex";
