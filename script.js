@@ -1,14 +1,3 @@
-/**
-Responsive HTML Table With Pure CSS - Web Design/UI Design
-
-Code written by:
-👨🏻‍⚕️ @Coding Design (Jeet Saru)
-
-> You can do whatever you want with the code. However if you love my content, you can **SUBSCRIBED** my YouTube Channel.
-
-🌎link: www.youtube.com/codingdesign 
-*/
-
 var list1 = []; var list2 = [];
 var list3 = []; var list4 = [];
 var list5 = [];
@@ -21,10 +10,14 @@ document.getElementById('output_image0').onclick = function() {
 	window.location.replace("Principale.html");
 }
 
-if(window.innerWidth <= 800){
-				let header = document.querySelector('.table__header');
-				let searchimg = document.getElementById('search_img');
-				header.style.gap = "10px"; searchimg.style.marginRight = "50%";
+let hasTouchScreen = false;
+const UA = navigator.userAgent;
+hasTouchScreen =  /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) || /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA);
+
+if (hasTouchScreen) {
+	let header = document.querySelector('.table__header');
+	let searchimg = document.getElementById('search_img');
+	header.style.gap = "10px"; searchimg.style.marginRight = "50%";
 }
 
 function addTable(row,prod,name) {
