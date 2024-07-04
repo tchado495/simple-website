@@ -30,33 +30,13 @@ const aritem=['item2','item3','item4','item1'];
 var wtn = 650; var x = 50; var remwtn = 650;
 
 for(let i=0; i<1; i++){
-	var c = document.createElement('canvas');
-var img0 = document.getElementById('output_image2');
-c.height = img0.naturalHeight; c.width = img0.naturalWidth;
-var ctx = c.getContext('2d'); ctx.drawImage(img0, 0, 0, c.width, c.height);
-var base64String = c.toDataURL(); array[0] = base64String;
-	
-	var img1 = document.getElementById('output_image3');
-c.height = img1.naturalHeight; c.width = img1.naturalWidth;
-ctx = c.getContext('2d'); ctx.drawImage(img1, 0, 0, c.width, c.height);
-base64String = c.toDataURL(); array[1] = base64String;
-
-	var img2 = document.getElementById('output_image4');
-c.height = img2.naturalHeight; c.width = img2.naturalWidth;
-ctx = c.getContext('2d'); ctx.drawImage(img2, 0, 0, c.width, c.height);
-base64String = c.toDataURL(); array[2] = base64String;
-
-	var img3 = document.getElementById('output_image1');
-c.height = img3.naturalHeight; c.width = img3.naturalWidth;
-ctx = c.getContext('2d'); ctx.drawImage(img3, 0, 0, c.width, c.height);
-base64String = c.toDataURL(); array[3] = base64String;
 	arraynext[0] = item2; arraynext[1] = item3; arraynext[2] = item4; arraynext[3] = item1;
 	arrayoutput[0] = 'output_image2'; arrayoutput[1] = 'output_image3'; arrayoutput[2] = 'output_image4'; arrayoutput[3] = 'output_image1';
-	//var img0 = "./image/pexels-brettjordan-825661.jpg";
-	//var img1 = "./image/pexels-barfisch-pix-115740.jpg";
-	//var img2 = "./image/pexels-jonathanborba-2983101.jpg";
-	//var img3 = "./image/pexels-shameel-mukkath-3421394-14731625.jpg";
-	 //array[0] = img0; array[1] = img1; array[2] = img2; array[3] = img3;
+	var img0 = "./image/pexels-brettjordan-825661.jpg";
+	var img1 = "./image/pexels-barfisch-pix-115740.jpg";
+	var img2 = "./image/pexels-jonathanborba-2983101.jpg";
+	var img3 = "./image/pexels-shameel-mukkath-3421394-14731625.jpg";
+	array[0] = img0; array[1] = img1; array[2] = img2; array[3] = img3;
 	arrayprod[0] = 'exemple1'; arrayprod[1] = 'exemple2';arrayprod[2] = 'exemple3'; arrayprod[3] = 'exemple4'; countrows = 4;
 }
 
@@ -602,9 +582,29 @@ async function fetchBlob()
 
 function fetchRow(urlimage,imgname,nextline){
 	//const Response = await fetch(urlimage);
-			//const fileblob = await Response.blob(); 
-			array[nextline] = urlimage; //array[nextline] = fileblob; 
-			arrayprod[nextline] = imgname; //alert("getrow : " + imgname);
+			//const fileblob = await Response.blob();
+			if(imgname == pizza1){
+				array[3] = urlimage; nextline = nexline - 1;
+				arrayprod[3] = imgname;
+			}else{
+				if(imgname == biriyani1){
+					array[2] = urlimage; nextline = nexline - 1;
+					arrayprod[2] = imgname;
+				}else{
+					if(imgname == hamburger1){
+						array[1] = urlimage; nextline = nexline - 1;
+						arrayprod[1] = imgname;
+					}else{
+						if(imgname == frite1){
+							array[0] = urlimage; nextline = nexline - 1;
+							arrayprod[0] = imgname;
+						}else{
+							array[nextline] = urlimage; //array[nextline] = fileblob; 
+							arrayprod[nextline] = imgname; //alert("getrow : " + imgname);
+						}
+					}
+				}
+			}
 			displayprod();
 			if(nextline >= countrows-1){
 				 startpage.close(); //alert("getrow end : " + imgname);
