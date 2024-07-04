@@ -539,17 +539,24 @@ function sendMessage() {
                 .catch(error => console.error('Error!', error.message))
 }
 
+function getmessage() {
+	var url = "https://test-websocket-server-echo.glitch.me/";
+	fetch(url,{ method: 'POST', body: JSON.stringify({ id: '2', name: 'tchado', type : 'countrow' }) })		
+            		.then(res => res.json())
+            		.then(data => {
+				alert('data : ' +data);
+            		});
+}
+
 async function fetchBlob()
 {
 		//url = "https://tchado495.github.io/testwebsocket/img3.png";
-		//url = Itempics;
-                //const Response = await fetch(url);
+		//url = Itempics; //const Response = await fetch(url);
 		
 		let textarea = document.getElementById('description1').value; //let textarea2 = document.getElementById('description2').value;
 		let msg = document.getElementById('email1').value; //let msg2 = document.getElementById('email2').value;
-
-		let fr = new FileReader();
-		
+	
+		//let fr = new FileReader();		
         	let urlsheet = "https://script.google.com/macros/s/AKfycbwTeJrJfJFskb_pJD-RkXa4ML_0hFMs7hRX13ry9aIt7GsQ2WoN6Yw_QM2ZZvER1zF2gA/exec";
 		let varpair = valnext/2; var valtextarea = ""; var valmsg = "";
 			valtextarea = textarea; valmsg = 'X'+msg; //alert('Message :' + valtextarea + '|' + valmsg);
@@ -569,14 +576,20 @@ async function fetchBlob()
             }
 	    
             // This line sends a POST request to the URL specified in the "url" variable, with the "obj" object as the request body
-            fetch(urlsheet,{
+            /*fetch(urlsheet,{
                 method:"POST",
                 body:JSON.stringify(obj)
             })
             // This line waits for the response from the server and converts it to text
             .then(response => alert('Message Texte+image envoyé !'))
             // This line logs the response data to the console
-            .then(data=>console.log(data))
+            .then(data=>console.log(data))*/
+
+	    fetch(urlsheet,{ method: 'POST', body: JSON.stringify(obj) })
+            		.then(res => res.json())
+            		.then(data => {
+				alert('Message Texte+image envoyé !'); getmessage();
+            		});
 	
 }
 
