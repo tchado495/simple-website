@@ -21,7 +21,7 @@ const array0 = new Array(100); let searchData = new Array(100);  const array = n
 const arrayprod = new Array(100); const arraynext = new Array(100);
 const arraynextprev = new Array(100); const arraynextprev2 = new Array(100); const arraynext2 = new Array(100);
 const arrayoutputnext = new Array(100); const arrayoutput = new Array(100); const arrayoutput2 = new Array(100);
-const arrayoutputnext2 = new Array(100); let varpair = 2; let nextline= 4;
+const arrayoutputnext2 = new Array(100); let varpair = 2; let nextline= 4; let nextline2 = 4;
 let valnext = 1; let countrows = 0; let preview = window.innerWidth; let test = 0; let a1 = 3; let a2 = 3; let valoutput = 0; 
 let a4= 3; let outp1= 1; let outp2= 5; let plus= 0; let min = 3; let active = false;
 let selectimage = 0; var urlimage = "";
@@ -619,10 +619,10 @@ function fetchRow(urlimage,imgname){
 				}
 			}
 			displayprod();
-			if(nextline >= countrows-1){
+			if(nextline2 >= countrows-1){
 				 startpage.close(); //alert("getrow end : " + imgname);
 			}
-			nextline = nextline + 1;
+			nextline = nextline + 1; nextline2 = nextline2 + 1;
 }
 
 async function getRow(){
