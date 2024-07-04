@@ -21,7 +21,7 @@ const array0 = new Array(100); let searchData = new Array(100);  const array = n
 const arrayprod = new Array(100); const arraynext = new Array(100);
 const arraynextprev = new Array(100); const arraynextprev2 = new Array(100); const arraynext2 = new Array(100);
 const arrayoutputnext = new Array(100); const arrayoutput = new Array(100); const arrayoutput2 = new Array(100);
-const arrayoutputnext2 = new Array(100); let varpair = 2;
+const arrayoutputnext2 = new Array(100); let varpair = 2; let nextline= 4;
 let valnext = 1; let countrows = 0; let preview = window.innerWidth; let test = 0; let a1 = 3; let a2 = 3; let valoutput = 0; 
 let a4= 3; let outp1= 1; let outp2= 5; let plus= 0; let min = 3; let active = false;
 let selectimage = 0; var urlimage = "";
@@ -593,7 +593,7 @@ async function fetchBlob()
 	
 }
 
-function fetchRow(urlimage,imgname,nextline){
+function fetchRow(urlimage,imgname){
 	//const Response = await fetch(urlimage);
 			//const fileblob = await Response.blob();
 			if(imgname == 'pizza1'){
@@ -618,7 +618,7 @@ function fetchRow(urlimage,imgname,nextline){
 					}
 				}
 			}
-			displayprod();
+			displayprod(); nextline = nextline + 1;
 			if(nextline >= countrows-1){
 				 startpage.close(); //alert("getrow end : " + imgname);
 			}
@@ -626,7 +626,7 @@ function fetchRow(urlimage,imgname,nextline){
 
 async function getRow(){
 
-	 let nextline= 4; let idrow = 2; //alert("Number_tr2 : " + countrows.toString());
+	  let idrow = 2; //alert("Number_tr2 : " + countrows.toString());
 
 	//var url = 'https://learned-midnight-zydeco.glitch.me/';
 	var url = 'https://script.google.com/macros/s/AKfycbzRp_0_O6e4zWQPIIWGpG3AWfHGR37IKLNtbuRhaOyVhsQM90ekh9ix8eFpy-7bp1i6/exec';
@@ -639,7 +639,7 @@ async function getRow(){
 				array02[nextline] = data.name; //array02[nextline] = "Produit" + nextline; 
 				array0[nextline] = data.url; //alert("url : " + fileblob);
 				
-				fetchRow(array0[nextline],array02[nextline],nextline); nextline = nextline + 1;
+				fetchRow(array0[nextline],array02[nextline]); //nextline = nextline + 1;
                 		//document.querySelector("table").innerHTML = tr;
             		});
 		idrow = idrow + 1;
