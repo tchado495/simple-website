@@ -12,7 +12,7 @@ var wh = 50; var wcir = 0; var mr = 5; var ht = 60; var tp = 300; var magincir =
 document.getElementById('output_image0').onclick = function() {
 	window.location.replace("Principale.html");
 }
-
+alert('window : ' +window.innerWidth);
 if(window.innerWidth <= 800){
 	chartCircle.innerHTML = ''; chartHisto.innerHTML = '';
 	//chartWrapper.style.display = "grid"; chartWrapper.style.gap = "20px"; chartWrapper.style.marginLeft = "5px";
