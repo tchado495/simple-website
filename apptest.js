@@ -547,7 +547,7 @@ function getmessage() {
 			'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE, OPTIONS',
 			'Access-Control-Max-Age': '86400',
 			'Access-Control-Allow-Headers': 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept'
- 			 }, body: JSON.stringify({ id: '2', name: 'tchado', type : 'countrow' }) })
+ 			 }, body: JSON.stringify({ id: '2', name: 'tchado', type : 'countrow' }) }, {mode: 'cors'})
             		.then(res => res.json())
             		.then(data => {
 				alert('data : ' +data);
