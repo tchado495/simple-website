@@ -540,7 +540,7 @@ function sendMessage() {
 }
 
 function getmessage(obj) {
-	var url = ;//"https://test-websocket-server-echo.glitch.me/";
+	//var url = ;//"https://test-websocket-server-echo.glitch.me/";
 /*fetch(url, {
   method: "POST",
   mode: "no-cors",
