@@ -250,9 +250,9 @@ function DataURL(productname){
 			if(plus == 4){
 				plus = 0; //resizethumb();
 	    		}
-			//if(valnext == countrows){
-				//valnext = -1;
-			//}
+			if(valnext >= countrows-4){
+				valnext = 0;
+			}
 			//valnext = valnext + 1;
 }
 
@@ -425,7 +425,7 @@ function testpage(type,imageurl){
 	    //if(valnext == -1){
 		//valnext = countrows-1;
 	    //}
-	    if(valnext == countrows){
+	    if(valnext >= countrows-4){
 		valnext = 0;
 	    }   
 
