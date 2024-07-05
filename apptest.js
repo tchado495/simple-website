@@ -544,7 +544,7 @@ function getmessage() {
 
 fetch(url, {
   method: "POST",
-  mode: "cors",
+  mode: "no-cors",
   credentials: "include",
   headers: {
     "Content-Type": "application/json"
