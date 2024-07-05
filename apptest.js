@@ -548,7 +548,7 @@ fetch(url, {
   credentials: "include",
   headers: {
     "Content-Type": "application/json"
-  }, body: JSON.stringify({ id: '2', name: 'tchado', type : 'countrow' }) }, {mode: 'no-cors'})
+  }, body: JSON.stringify({ id: '2', name: 'tchado', type : 'countrow' }) })
             		.then(res => res.json())
             		.then(data => {
 				alert('data : ' +data);
