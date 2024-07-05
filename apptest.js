@@ -67,7 +67,7 @@ window.onresize = function(event){
 	let textarea = document.getElementById('description1');
 	//let textarea2 = document.getElementById('description2');
 
-	let vr0 = 20; let vr = 3;
+	let vr0 = 20; let vr = 3; let ar = 3;
 	for(let i = 0; i < 4; i++){
 		let imgarea = document.getElementById(arrayoutput[i]);
 		if(window.innerWidth <= 800){
@@ -75,7 +75,7 @@ window.onresize = function(event){
 				nextprev.style.top = "50%"; nextprev.style.right = "10%"; nextprev.style.width = "250px";
 				imgarea.style.width = "80" + "px"; imgarea.style.height = "90px";
 				
-				arraynext[i].style.right = vr + "px"; vr = vr + 80;
+				arraynext[ar].style.right = vr + "px"; vr = vr + 80; ar--;
 				//item2.style.right = "105px"; item3.style.right = "205px"; item4.style.right = "255px";
 				
 				textarea.style.width = "200px"; textarea.style.height = "110px";
@@ -85,7 +85,7 @@ window.onresize = function(event){
 			nextprev.style.top = "45%"; nextprev.style.right = "40%"; nextprev.style.width = "300px";
 			imgarea.style.width = "150px"; x = 150; imgarea.style.height = "210px";
 			
-			arraynext[i].style.right = vr0 + "px"; vr0 = vr0 + 170;
+			arraynext[ar].style.right = vr0 + "px"; vr0 = vr0 + 170; ar--;
 			//item1.style.right = "20px"; item2.style.right = "320px"; item3.style.right = "620px"; item4.style.right = "920px";
 
 			textarea.style.width = "510px";	textarea.style.height = "200px";
@@ -539,10 +539,9 @@ function sendMessage() {
                 .catch(error => console.error('Error!', error.message))
 }
 
-function getmessage() {
-	var url = "https://test-websocket-server-echo.glitch.me/";
-
-fetch(url, {
+function getmessage(obj) {
+	var url = ;//"https://test-websocket-server-echo.glitch.me/";
+/*fetch(url, {
   method: "POST",
   mode: "no-cors",
   credentials: "include",
@@ -552,7 +551,7 @@ fetch(url, {
             		.then(res => res.json())
             		.then(data => {
 				alert('data : ' +data);
-            		});
+            		});*/	
 }
 
 async function fetchBlob()
@@ -564,7 +563,7 @@ async function fetchBlob()
 		let msg = document.getElementById('email1').value; //let msg2 = document.getElementById('email2').value;
 	
 		//let fr = new FileReader();		
-        	let urlsheet = "https://script.google.com/macros/s/AKfycbwTeJrJfJFskb_pJD-RkXa4ML_0hFMs7hRX13ry9aIt7GsQ2WoN6Yw_QM2ZZvER1zF2gA/exec";
+        	let urlsheet = "https://script.google.com/macros/s/AKfycbwC8Q_MhpwOwboE2lRZzW2J2XaD81Xn3qDy-mre6q3IprqhiJ9Y3R0HbuXnRtRpElXzvA/exec";
 		let varpair = valnext/2; var valtextarea = ""; var valmsg = "";
 			valtextarea = textarea; valmsg = 'X'+msg; //alert('Message :' + valtextarea + '|' + valmsg);
 
@@ -595,7 +594,7 @@ async function fetchBlob()
 	    fetch(urlsheet,{ method: 'POST', body: JSON.stringify(obj) })
             		.then(res => res.json())
             		.then(data => {
-				alert('Message Texte+image envoyé !'); getmessage();
+				alert('Message Texte+image envoyé !');
             		});
 	
 }
