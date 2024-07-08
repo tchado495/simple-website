@@ -577,7 +577,7 @@ async function fetchBlob()
                 type:'image/png',
                 name:'img1.png',
 		message: valtextarea,
-		numeros: valmsg, 
+		numeros: valmsg,
 		valeur: 'waiting'
             }
 	    
