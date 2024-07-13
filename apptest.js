@@ -321,11 +321,21 @@ function testpage(type,imageurl){
     // This line declares a variable called "img" and assigns it the value of the first image element on the page
     let img2 = document.getElementById('output'); let bp = true;
 	 let sliderItems = sliderList.querySelectorAll('.item');
-
-         if(type == 1){
+	
+         if(type == 1) {
 		valnext = valnext - 2;
-		if(valnext - 3 < 0){
-			valnext = 0; bp = false; alert('prev false!');
+		if(valnext <= 3) { //if(valnext - 3 < 0)
+			bp = false; alert('prev false!'); //valnext = 0;
+			if(valnext > 0){
+				valnext--;
+			}else{
+				valnext = 0;
+			}
+		}
+	 }
+	 if(type == 0) {
+		if(valnext <= 3) {
+			bp = false; 
 		}
 	 }
  
@@ -334,26 +344,21 @@ function testpage(type,imageurl){
             // This line declares a variable called "res" and assigns it the result of the FileReader object
             let res = array[valnext]; //fr.result;
             // This line sets the "src" attribute of the "img" element to the value of "res"
-	    img2.src=res;
-            // This line splits the "res" variable into an array, using the string "base64," as the separator, and assigns the second element to a variable called "spt"
-            let spt = res.split("base64,")[1];
-            // This line creates an object called "obj" with three properties: "base64", "type", and "name"
-            let obj = {
-                base64:spt,
-                type:'image/png',
-                name:'img1.png'
-            }    
+	    if(bp == true){
+	    	img2.src=res;
+	    }
 
 	    if(type == 0){
-		valoutput = valoutput + 5;
-		//let img0 =document.createElement('img'); img0.src= res; //'./image/img3.png';
-		//img0.setAttribute("id","output_image" + valoutput.toString());
-		//thumbnail.appendChild(img0);
-		let div; div = document.createElement('div'); div.setAttribute("id","output_div" + valoutput.toString());
-		//div.textContent = number;
-    		//div.classList.add('bar', 'item1')
-    		//rgb(255, 165, 0)
-    		Object.assign(div.style, {
+		if(bp == true){
+			valoutput = valoutput + 5;
+			//let img0 =document.createElement('img'); img0.src= res; //'./image/img3.png';
+			//img0.setAttribute("id","output_image" + valoutput.toString());
+			//thumbnail.appendChild(img0);
+			let div; div = document.createElement('div'); div.setAttribute("id","output_div" + valoutput.toString());
+			//div.textContent = number;
+    			//div.classList.add('bar', 'item1')
+    			//rgb(255, 165, 0)
+    			Object.assign(div.style, {
 			width: 150 + 'px',
 			height: 208 + 'px',
 			position: 'absolute',
@@ -361,23 +366,26 @@ function testpage(type,imageurl){
 			right: 20 + 'px',
 			background: 'url(' + res + ') center / cover',
 			zIndex: '100'
-    		})
-		slider.appendChild(div); //div.appendChild(img0);
-		//resizethumb("output_image" + valoutput.toString());*****************
-		resizethumb("output_div" + valoutput.toString());
-		//reordernamefn("output_image" + valoutput.toString());*****************
-		reordernamefn("output_div" + valoutput.toString());
-		//thumbnail.style.height = "200px"; thumbnail.style.width = "140px";*****
-		//thumbnail.style.borderRadius = "100px";
-		//var remwtn2 = remwtn + 60; thumbnail.style.right = "550" + "px";***** //resizethumb();
-		slider.classList.add('next');
-		valnext = valnext + 1;
-		if(test >= 4){
-			removethumb(0,div); //resizethumb();
-		}else{
-			removethumb(0,div);
+    			})
+			slider.appendChild(div); //div.appendChild(img0);
+			//resizethumb("output_image" + valoutput.toString());*****************
+			resizethumb("output_div" + valoutput.toString());
+			//reordernamefn("output_image" + valoutput.toString());*****************
+			reordernamefn("output_div" + valoutput.toString());
+			//thumbnail.style.height = "200px"; thumbnail.style.width = "140px";*****
+			//thumbnail.style.borderRadius = "100px";
+			//var remwtn2 = remwtn + 60; thumbnail.style.right = "550" + "px";***** //resizethumb();
+			slider.classList.add('next');
+			valnext = valnext + 1;
+			if(test >= 4){
+				removethumb(0,div); //resizethumb();
+			}else{
+				removethumb(0,div);
+			}
+			test = test + 1;
+		}else{			
+			res = array[valnext]; img2.src=res; slider.classList.add('next'); valnext = valnext+1; //bp = true;
 		}
-		test = test + 1;
 	    }else{
 		//valnext = valnext - 2;
 		if(bp == true){
@@ -414,9 +422,12 @@ function testpage(type,imageurl){
 					removethumb(1,div); alert('preview !');
 				}
 				test = test + 1;
-	    		}//else{
+	    		}else{
 				//valnext = valnext + 2;
-			//}
+			        if(valnext != 0){
+					res = array[valnext]; img2.src=res; slider.classList.add('prev'); bp = true;
+				}				
+			}
 	    }	
 	    
 	    if(valoutput >= 625){
