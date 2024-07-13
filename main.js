@@ -23,7 +23,7 @@ if(hasTouchScreen){
         chartHisto.style.left = "5px";
 	chartCircle.style.height = "220px"; chartCircle.style.width = "200px"; chartCircle.style.left = "5px";
 	//chartCircle.style.display = "grid";
-	chartCircle.style.top = "50%"; //chartHisto.style.marginTop = "10px"; chartWrapper.style.top = "10px";
+	chartHisto.style.top = "20%"; chartCircle.style.top = "67%"; //chartHisto.style.marginTop = "10px"; chartWrapper.style.top = "10px";
 	wh = 22; mr = 2; ht = 90; wcir = 0; tp = 230; quot = 4; active = true; //alert('resizing 0 !');
 }
 
@@ -133,7 +133,7 @@ window.addEventListener('resize', e => {
         chartHisto.style.left = "5px";
 	chartCircle.style.height = "220px"; chartCircle.style.width = "200px"; chartCircle.style.left = "5px";
 	//chartCircle.style.display = "grid";
-	chartCircle.style.top = "50%"; //chartHisto.style.marginTop = "10px"; chartWrapper.style.top = "10px";
+	chartCircle.style.top = "60%"; //chartHisto.style.marginTop = "10px"; chartWrapper.style.top = "10px";
 	wh = 10; mr = 2; ht = 90; wcir = 0; tp = 250; quot = 4; active = true; //alert('resizing 000 !');
 
     createHistograph(data)
