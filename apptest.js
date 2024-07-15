@@ -24,7 +24,7 @@ const arrayoutputnext = new Array(100); const arrayoutput = new Array(100); cons
 const arrayoutputnext2 = new Array(100); let varpair = 2; let nextline= 4; let nextline2 = 4;
 let valnext = 1; let countrows = 0; let preview = window.innerWidth; let test = 0; let a1 = 3; let a2 = 3; let valoutput = 0; 
 let a4= 3; let outp1= 1; let outp2= 5; let plus= 0; let min = 3; let active = false;
-let selectimage = 0; var urlimage = "";
+let selectimage = 0; var urlimage = ""; let varleft = false;
 const aritem=['item2','item3','item4','item1'];
 
 var wtn = 650; var x = 50; var remwtn = 650;
@@ -327,13 +327,13 @@ function testpage(type,imageurl){
 		if(valnext <= 3) { //if(valnext - 3 < 0)
 			bp = false; alert('prev false!'); //valnext = 0;
 			if(valnext > 0){
-				valnext--;
+				//valnext--;
 			}else{
 				valnext = 0;
 			}
 		}
 	 }
-	 if(type == 0) {
+	 if(type == 0 && varleft == true) {
 		if(valnext <= 3) {
 			bp = false; 
 		}
@@ -349,6 +349,7 @@ function testpage(type,imageurl){
 	    }
 
 	    if(type == 0){
+		    varleft = false;
 		if(bp == true){
 			valoutput = valoutput + 5;
 			//let img0 =document.createElement('img'); img0.src= res; //'./image/img3.png';
@@ -387,7 +388,7 @@ function testpage(type,imageurl){
 			res = array[valnext]; img2.src=res; slider.classList.add('next'); valnext = valnext+1; //bp = true;
 		}
 	    }else{
-		//valnext = valnext - 2;
+		varleft = true; //valnext = valnext - 2;
 		if(bp == true){
 		    let valnextprev = valnext - 3; valoutput = valoutput + 5;
 		    		//let img0 =document.createElement('img'); img0.src= res; //'./image/img4.png';
