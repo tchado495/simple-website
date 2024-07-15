@@ -45,7 +45,7 @@ document.getElementById('output_image0').onclick = function() {
 }
 
 if(window.innerWidth <= 800){
-				//vr = vr + 80; active = true;
+				active = true; //vr = vr + 80; active = true;
 				let textarea = document.getElementById('description1');
 				nextprev.style.top = "50%"; nextprev.style.right = "10%"; nextprev.style.width = "250px";
 				output_image1.style.width = "80" + "px"; output_image1.style.height = "90px";
