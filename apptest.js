@@ -426,8 +426,8 @@ function testpage(type,imageurl){
 	    		}else{
 				//valnext = valnext + 2;
 			        if(valnext != 0){
-					res = array[valnext]; img2.src=res; slider.classList.add('prev'); bp = true;
-				}				
+					res = array[valnext]; img2.src=res; slider.classList.add('prev'); bp = true; valnext = valnext + 1;
+				}			
 			}
 	    }	
 	    
