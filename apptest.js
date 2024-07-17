@@ -136,10 +136,15 @@ function reorderfn(thumb){
 		arraynext[i] = arraynextprev[a-1]; //arraynext2[i] = arraynextprev2[a-1]; //arrayprev[i] = arraynext[i];
 	}
 	arraynextprev[a] = thumb; arraynext[a] = thumb; //arraynext2[a] = thumb2;
-	let vr0 = 20; //arraynext = arraynextprev; arrayprev = arraynextprev;
-	for(let i = 3; i>=0; i--){
-		arraynext[i].style.right = vr0 + 'px'; vr0 = vr0 + 170;
-		//arraynext[i].classList.add('bar', aritem[i]);
+	let vr0 = 20; let vr02 = 5; //arraynext = arraynextprev; arrayprev = arraynextprev;
+	for(let i = 3; i>=0; i--) {
+		if(active == false){
+			arraynext[i].style.right = vr0 + 'px'; vr0 = vr0 + 170;
+			//arraynext[i].classList.add('bar', aritem[i]);
+		}else{
+			arraynext[i].style.right = vr02 + 'px'; vr02 = vr02 + 50;
+			//arraynext[i].classList.add('bar', aritem[i]);
+		}
 	}
 }
 
@@ -154,10 +159,15 @@ function reorderfp(thumb){
 		arraynext[i] = arraynextprev[i]; //arrayprev[i] = arraynext[i];
 		//arraynext2[i] = arraynextprev2[i];
 	}
-	let vr0 = 530; //arraynext = arraynextprev; arrayprev = arraynextprev;
+	let vr0 = 530; let vr02 = 230; //arraynext = arraynextprev; arrayprev = arraynextprev;
 	for(let i = 0; i<4; i++){
-		arraynext[i].style.right = vr0 + 'px'; vr0 = vr0 - 170;
-		//arraynext[i].classList.add('bar', aritem[i]);
+		if(active == true){
+			arraynext[i].style.right = vr0 + 'px'; vr0 = vr0 - 170;
+			//arraynext[i].classList.add('bar', aritem[i]);
+		}else{
+			arraynext[i].style.right = vr02 + 'px'; vr02 = vr02 - 50;
+			//arraynext[i].classList.add('bar', aritem[i]);
+		}
 	}
 }
 
