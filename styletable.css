@@ -320,7 +320,7 @@ thead th.active,tbody td.active {
 
 .export__file .export__file-options label:first-of-type{
     padding: 1rem 0;
-    background-color: DodgerBlue !important;
+    background-color: lightblue !important;
 }
 
 .export__file .export__file-options label:hover{
